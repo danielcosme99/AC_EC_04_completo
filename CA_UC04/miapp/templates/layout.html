@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}{% endblock %} | UC04
+    </title>
+    {% load static %}<link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}" />
+</head>
+<body>
+    <header>
+        <div id="logotipo">
+            <img src="{% static 'images/logito.png' %}">
+            <h1>UC04 | Alanya Villar, Cosme Hernandez</h1>
+        </div>
+    </header>
+    <nav>
+        <ul><li><a href="{% url 'integrantes' %}"> Integrantes </a></li>
+            <li><a href="{% url 'saludo' %}"> Mensaje de saludo </a></li></ul>
+    </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+    <div id="content">
+        <div class="box">{% block content %}{% endblock %}</div>
+    </div>
+    <footer>
+        UNTELS - Lenguaje de Programación III &COPY; Alanya Villar, Cosme Hernandez - {% now "d/m/Y h:m:s " %}
+    </footer>
+</body>
+</html>
