@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect, render, HttpResponse
+from miapp import models
 
 # Create your views here.
 layout = """"""
@@ -15,3 +16,4 @@ def saludo(request):
         'titulo':'Bienvenidos',
         'mensaje':'Proyecto para la Unidad de Competencia 04 (UC04)'
     })
+
